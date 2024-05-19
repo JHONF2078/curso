@@ -1,0 +1,14 @@
+services:
+  web:
+    # depends_on:
+    #   - mongo
+    container_name: web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+        - "8001:8001"
+    #command: uvicorn main:app --host 0.0.0.0 --reload
+    # environment:
+    #   DB_URL: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_DB_NAME}:27017
+    #   DB_NAME: ${MONGO_DB_NAME}
